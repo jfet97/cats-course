@@ -72,7 +72,8 @@ object Functors {
 
   //
   // TODO 2: write a shorted do10x method using extension methods
-  def do10xShorter[F[_] : Functor](container: F[Int]): F[Int] = container.map(_ * 10)
+  def do10xShorter[F[_]: Functor](container: F[Int]): F[Int] =
+    container.map(_ * 10)
 
   def main(args: Array[String]): Unit = {
 
