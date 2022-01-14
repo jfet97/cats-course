@@ -59,6 +59,9 @@ object Monads {
 
     def ap[A, B](ma: M[A])(mf: M[A => B]): M[B] =
       flatMap(ma)(a => map(mf)(f => f(a)))
+
+    def product[A, B](ma: M[A], mb: M[B]) : M[(A, B)] =
+      flatMap(ma)(a => map(mb)(b => (a, b)))
   }
 
   // Cats Monad
