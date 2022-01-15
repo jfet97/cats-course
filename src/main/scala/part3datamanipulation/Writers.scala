@@ -6,7 +6,7 @@ import scala.concurrent.Future
 
 object Writers {
 
-  import cats.data.Writer
+  import cats.data.Writer // A => B where B is fixed
   // to keep track of useful information while the data is being manipulated
 
   // Pattern:

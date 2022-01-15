@@ -45,7 +45,7 @@ object Readers {
 
   //
   // cats Reader
-  import cats.data.Reader
+  import cats.data.Reader // A => B where A is fixed
 
   // given a configuration, the reader is able to extract a DB connection
   // it is a function Configuration => DbConnection
